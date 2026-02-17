@@ -341,12 +341,36 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
 }
 
+.hero-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.hero-video-bg video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+}
+
 .hero-overlay {
     position: absolute;
     inset: 0;
     background: 
         radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 60%),
-        radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.15) 0%, transparent 60%);
+        radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.15) 0%, transparent 60%),
+        linear-gradient(135deg, rgba(15, 23, 42, 0.7), rgba(30, 41, 59, 0.8));
     z-index: 1;
 }
 

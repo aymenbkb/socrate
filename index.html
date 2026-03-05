@@ -508,7 +508,7 @@
                                     </div>
                                     <div>
                                         <h5>Email</h5>
-                                        <p><a href="mailto:info@socratesacademy.org"  style="    color: #ffffff; text-decoration: underline;">info@socratesacademy.org</a></p>
+                                        <p><a href="mailto:contact@socratesacademy.org"  style="    color: #ffffff; text-decoration: underline;">info@socratesacademy.org</a></p>
                                     </div>
                                 </div>
                                 <div class="contact-detail-item">
@@ -517,7 +517,7 @@
                                     </div>
                                     <div>
                                         <h5>Phone</h5>
-                                        <p>+41 (0) XXX XXX XXX</p>
+                                        <p>+33 640646514</p>
                                     </div>
                                 </div>
                             </div>
@@ -525,28 +525,42 @@
                     </div>
                     
                     <div class="col-lg-7 wow fadeIn" data-wow-delay=".5s">
-                        <form class="contact-form-modern">
+                        <form name="contact" method="POST" data-netlify="true" class="contact-form-modern">
+                            
+                            <input type="hidden" name="form-name" value="contact">
+
+                            <p hidden>
+                            <label>Don’t fill this out: <input name="bot-field"></label>
+                            </p>
+
                             <div class="row g-3">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control-modern" placeholder="Your Name">
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control-modern" placeholder="Your Email">
-                                </div>
-                                <div class="col-12">
-                                    <input type="tel" class="form-control-modern" placeholder="Phone Number (Optional)">
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control-modern" rows="5" placeholder="Your Message"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn-submit-modern">
-                                        <span>Send Message</span>
-                                        <i class="fas fa-paper-plane"></i>
-                                    </button>
-                                </div>
+
+                            <div class="col-md-6">
+                            <input type="text" name="name" class="form-control-modern" placeholder="Your Name" required>
                             </div>
-                        </form>
+
+                            <div class="col-md-6">
+                            <input type="email" name="email" class="form-control-modern" placeholder="Your Email" required>
+                            </div>
+
+                            <div class="col-12">
+                            <input type="tel" name="phone" class="form-control-modern" placeholder="Phone Number (Optional)">
+                            </div>
+
+                            <div class="col-12">
+                            <textarea name="message" class="form-control-modern" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+
+                            <div class="col-12">
+                            <button type="submit" class="btn-submit-modern">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                            </button>
+                            </div>
+
+                            </div>
+
+                            </form>
                     </div>
                 </div>
             </div>
